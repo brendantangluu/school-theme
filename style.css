@@ -403,6 +403,10 @@ h6 {
 	clear: both;
 }
 
+.staff-category {
+	text-decoration: underline;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -720,6 +724,10 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.staff-section {
+	padding: 0 2rem;
 }
 
 /* Comments
