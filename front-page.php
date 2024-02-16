@@ -20,6 +20,8 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
+
+			get_template_part('template-parts/content', 'page');
 		?>
 			<section class = "home-intro">
 				<h1><?php the_title() ?></h1>
