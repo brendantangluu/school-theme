@@ -10,3 +10,10 @@ h6 {
 .staff-category{
 	text-decoration: underline;
 }
+
+@media (min-width: 600px){
+	.staff-wrapper h2{
+		width: 100%;
+		font-size: 1.75rem;
+	}
+}

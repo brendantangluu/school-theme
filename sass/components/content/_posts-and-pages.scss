@@ -24,3 +24,17 @@
 .staff-section{
 	padding: 0 2rem;
 }
+
+@media (min-width: 600px){
+	.staff-content{
+		width: 48%;
+		margin: 0;
+		line-height: 1.75rem;
+	}
+	
+	.staff-wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}

@@ -44,12 +44,12 @@ get_header();
 	
 							$query = new WP_Query($args);
 							if($query -> have_posts()){
-								echo '<section><h2 class = "staff-category">' . esc_html__( $term->name, 'fwd') .'</h2>';
+								echo '<section class = "staff-wrapper"><h2 class = "staff-category">' . esc_html__( $term->name, 'fwd') .'</h2>';
 									while($query -> have_posts()){
 										$query -> the_post();
 										
 										?>
-										<article>
+										<article class = 'staff-content'>
 											<?php
 												$id = get_the_id();
 											?>
