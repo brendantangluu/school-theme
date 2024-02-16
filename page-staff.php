@@ -17,11 +17,9 @@ get_header();
 
 	<main id="primary" class="site-main">
 		<div class = 'staff-section'>
-			<header>
-				<h1><?php the_title() ?></h1>
-			</header>
-				<!-- Output the posts -->
+			<!-- Output the posts -->
 			<?php
+			get_template_part( 'template-parts/content', 'page' );
 				$taxonomy = 'school-staff-category';
 					$terms = get_terms( 
 						array(
