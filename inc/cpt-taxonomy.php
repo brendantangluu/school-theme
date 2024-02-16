@@ -42,7 +42,7 @@ function school_register_custom_post_types(){
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'staff' ),
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-archive',
@@ -69,15 +69,22 @@ function school_register_taxonomies(){
         'menu_name'         => __( 'Staff Category' ),
     );
     $args = array(
-        'hierarchical'      => true,
-        'labels'            => $labels,
-        'show_ui'           => true,
-        'show_in_menu'      => true,
-        'show_in_nav_menu'  => true,
-        'show_in_rest'      => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'staff-categories' ),
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'staff' ),
+        'capability_type'    => 'post',
+        'has_archive'        => false,
+        'hierarchical'       => false,
+        'menu_position'      => 7,
+        'menu_icon'          => 'dashicons-heart',
+        'supports'           => array( 'title' ),
+        'template'           => array( array( 'core/quote' ) ),
+        'template_lock'      => 'all'
     );
     register_taxonomy( 'school-staff-category', array( 'school-staff' ), $args );
 }
