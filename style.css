@@ -626,6 +626,32 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.site,
+.page-id-78 .site {
+	display: grid;
+	overflow: hidden;
+	margin: 0 auto;
+	max-width: 2200px;
+	grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+	grid-template-areas: "header header header" ". main ." "footer footer footer";
+}
+
+.site-header {
+	grid-area: header;
+}
+
+.site-main {
+	grid-area: main;
+}
+
+.widget-area {
+	grid-area: sidebar;
+}
+
+.site-footer {
+	grid-area: footer;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
