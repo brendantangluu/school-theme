@@ -102,6 +102,14 @@ function school_theme_setup() {
 			'flex-height' => true,
 		)
 	);
+	// Add support for wide and full align in the block editor
+	add_theme_support('align-wide');
+
+	// Add support for block styles
+	add_theme_support('wp-block-styles');
+
+	// Add support for editor styles
+	add_theme_support('editor-styles');
 }
 add_action( 'after_setup_theme', 'school_theme_setup' );
 
