@@ -23,9 +23,6 @@ get_header();
 
 			get_template_part('template-parts/content', 'page');
 		?>
-			<section class = "home-intro">
-				<h1><?php the_title() ?></h1>
-			</section>
 			<section class = "home-blog">
 				<h2><?php esc_html_e('Recent News', 'school-theme')?></h2>
 				<?php
