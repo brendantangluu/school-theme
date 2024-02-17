@@ -237,3 +237,24 @@ function wpb_change_title_text( $title ){
   
 add_filter( 'enter_title_here', 'wpb_change_title_text' );
 
+// Change the excerpt more text
+
+function school_excerpt_more($more){
+	if(is_page(119)){
+		$more = '...<a class="read-more" href="'.esc_url( get_permalink() ).'">Read more about the student...</a>';
+		return $more;
+	}
+}
+
+add_filter('excerpt_more' , 'school_excerpt_more');
+
+// Change the excerpt length to 25 words
+function school_excerpt_length($length){
+	return 25;
+}
+
+add_filter( 'excerpt_length', 'school_excerpt_length', 999 );
+
+
+
+

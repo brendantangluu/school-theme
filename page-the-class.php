@@ -16,59 +16,54 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		
-		<?php
-		get_template_part( 'template-parts/content', 'page' );
-		
-		$taxonomy = 'school-specialty-category';
-		$terms = get_terms(
-			array(
-				'taxonomy' => $taxonomy,
-			)
-		);
-		if($terms && ! is_wp_error($terms)){
-			foreach($terms as $term){
-				$args = array(
-					'post_type'      => 'school-student',
-					'posts_per_page' => -1,
-					'orderby'		 => 'title',
-					'order'			 => 'ASC',
-					'tax_query'		 => array(
-						array(
-							'taxonomy'	=> 'school-specialty-category',
-							'field'		=> 'slug',
-							'terms'  	=> $term->slug
+			<?php
+			get_template_part( 'template-parts/content', 'page' );
+			
+			$taxonomy = 'school-specialty-category';
+			$terms = get_terms(
+				array(
+					'taxonomy' => $taxonomy,
+				)
+			);
+			echo "<section class = 'students'>";
+			if($terms && ! is_wp_error($terms)){
+				foreach($terms as $term){
+					$args = array(
+						'post_type'      => 'school-student',
+						'posts_per_page' => -1,
+						'orderby'		 => 'title',
+						'order'			 => 'ASC',
+						'tax_query'		 => array(
+							array(
+								'taxonomy'	=> 'school-specialty-category',
+								'field'		=> 'slug',
+								'terms'  	=> $term->slug
+							)
 						)
-					)
-				);
-				$query = new WP_Query($args);
-				if($query -> have_posts()){
-					while($query -> have_posts()){
-						$query -> the_post();
-						
-						?>
-						<article>
-							<?php
-								$id = get_the_id();
+					);
+					$query = new WP_Query($args);
+					if($query -> have_posts()){
+						while($query -> have_posts()){
+							$query -> the_post();
 							?>
-								<h2 id=<?php echo $id; ?>>
-								<a href="<?php $id; ?> "><?php the_title(); ?></a>
-								</h2>
-							
-						</article>
-						<?php
+							<article class = "student-item">
+								<?php
+									$id = get_the_id();
+								?>
+									<h2 id=<?php echo $id; ?>>
+										<a href="<?php the_permalink(); ?> "><?php the_title(); ?></a>
+									</h2>
+									<?php the_post_thumbnail('medium'); ?>
+									<?php the_excerpt(); ?>
+									<?php echo get_the_term_list( $post->ID, 'school-specialty-category', '<p>Specialty: ', '<p>' ); ?>
+							</article>
+							<?php
+						}				
 					}
-					
-					?><p><?php echo $term->name ?></p><?php
 				}
-
-
-
-
 			}
-		}
-		?>
-
+			?>
+		</section>
 	</main><!-- #main -->
 
 <?php
