@@ -19,22 +19,20 @@ get_header();
 			get_template_part( 'template-parts/content', get_post_type() );
 
 
-			$taxonomy = 'fwd-service-category';
-				$terms = get_terms( 
-					array(
-						'taxonomy' => $taxonomy,
-					) 
-				);
+			$taxonomy = 'school-specialty-category';
+			$post_type = 'school-student';
+			$current_student_id = get_the_ID();
+			$terms = get_the_terms(get_the_ID(), $taxonomy);
 				if ( $terms && ! is_wp_error( $terms ) ) {
 					foreach ( $terms as $term ) {			
 						$args = array(
-							'post_type'      => 'fwd-service',
+							'post_type'      => $post_type,
 							'posts_per_page' => -1,
 							'orderby'		 => 'title',
 							'order'			 => 'ASC',
 							'tax_query'		 => array(
 								array(
-									'taxonomy'	=> 'fwd-service-category',
+									'taxonomy'	=> $taxonomy,
 									'field'		=> 'slug',
 									'terms'  	=> $term->slug
 								)
@@ -43,31 +41,22 @@ get_header();
 
 						$query = new WP_Query($args);
 						if($query -> have_posts()){
-							?><h3><?php echo $term->name ?></h3><?php
-							while($query -> have_posts()){
-								$query -> the_post();
-								
-								?>
-								<article>
-									<?php
-										$id = get_the_id();
-									?>
-										<h3 id=<?php echo $id; ?>><?php the_title(); ?></h3>
-										<p><?php the_field('service')?></p>
-								</article>
-								<?php
-							}
+							echo '<aside>';
+							?> 
+								<h3>Meet other <?php echo $term->name?>s:</h3>
 							
+							<?php
+							 while ($query->have_posts()) {
+								$query->the_post();
+								if ($current_student_id != $query->post->ID) { // Check if the related post ID is not equal to the current post ID
+									echo '<a href="' . get_permalink() . '">' . get_the_title() . '</a> ';
+								}
+							}
+							echo '</aside>';
 							wp_reset_postdata();
 						}
 					}
 				}
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'school-theme' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'school-theme' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
 		endwhile; // End of the loop.
 		?>
 
