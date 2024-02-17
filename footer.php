@@ -18,6 +18,9 @@
 				<?php 
 				wp_nav_menu( array( 'theme_location' => 'footer-menu')); 
 				?>
+				<?php 
+				the_custom_logo();
+				?>
 			</nav>
 	
 	<div class="site-info">
