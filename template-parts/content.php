@@ -28,11 +28,12 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php school_theme_post_thumbnail('medium'); ?>
+	
+	
 
 	<div class="entry-content">
 		<?php
+		the_post_thumbnail('medium');
 		if(is_single()){
 			the_content();
 			

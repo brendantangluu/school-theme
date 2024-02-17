@@ -642,6 +642,8 @@ textarea {
 
 .site-main {
 	grid-area: main;
+	margin-top: 55px;
+	padding: 0 1rem;
 }
 
 .widget-area {
@@ -772,6 +774,12 @@ textarea {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+	}
+	.single-school-student .wp-post-image {
+		display: inline;
+		float: right;
+		margin-left: 1.5em;
+		margin-bottom: 0;
 	}
 }
 /* Comments
