@@ -39,22 +39,22 @@ function school_register_custom_post_types(){
         'template_lock'      => 'all'
     );
 
-    register_post_type( 'school-student', $args );
+    register_post_type( 'school-staff', $args );
 
     // Register Student CPT
 
     $labels = array(
-        'name'               => _x( 'Student', 'post type general name'  ),
+        'name'               => _x( 'Students', 'post type general name'  ),
         'singular_name'      => _x( 'Student', 'post type singular name'  ),
-        'menu_name'          => _x( 'Student', 'admin menu'  ),
-        'name_admin_bar'     => _x( 'Student', 'add new on admin bar' ),
-        'add_new'            => _x( 'Add New', 'Student' ),
+        'menu_name'          => _x( 'Students', 'admin menu'  ),
+        'name_admin_bar'     => _x( 'Students', 'add new on admin bar' ),
+        'add_new'            => _x( 'Add New', 'Students' ),
         'add_new_item'       => __( 'Add New Student' ),
         'new_item'           => __( 'New Student' ),
         'edit_item'          => __( 'Edit Student' ),
         'view_item'          => __( 'View Student'  ),
-        'all_items'          => __( 'All Student' ),
-        'search_items'       => __( 'Search Student' ),
+        'all_items'          => __( 'All Students' ),
+        'search_items'       => __( 'Search Students' ),
         'parent_item_colon'  => __( 'Parent Student:' ),
         'not_found'          => __( 'No Student found.' ),
         'not_found_in_trash' => __( 'No Student found in Trash.' ),
