@@ -39,7 +39,55 @@ function school_register_custom_post_types(){
         'template_lock'      => 'all'
     );
 
-    register_post_type( 'school-staff', $args );
+    register_post_type( 'school-student', $args );
+
+    // Register Student CPT
+
+    $labels = array(
+        'name'               => _x( 'Student', 'post type general name'  ),
+        'singular_name'      => _x( 'Student', 'post type singular name'  ),
+        'menu_name'          => _x( 'Student', 'admin menu'  ),
+        'name_admin_bar'     => _x( 'Student', 'add new on admin bar' ),
+        'add_new'            => _x( 'Add New', 'Student' ),
+        'add_new_item'       => __( 'Add New Student' ),
+        'new_item'           => __( 'New Student' ),
+        'edit_item'          => __( 'Edit Student' ),
+        'view_item'          => __( 'View Student'  ),
+        'all_items'          => __( 'All Student' ),
+        'search_items'       => __( 'Search Student' ),
+        'parent_item_colon'  => __( 'Parent Student:' ),
+        'not_found'          => __( 'No Student found.' ),
+        'not_found_in_trash' => __( 'No Student found in Trash.' ),
+    );
+    
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'student' ),
+        'capability_type'    => 'post',
+        'has_archive'        => false,
+        'hierarchical'       => false,
+        'show_in_rest'       => true,
+        'menu_position'      => 7,
+        'menu_icon'          => 'dashicons-admin-users',
+        'supports'           => array( 'title', 'editor' ),
+        'template'           => array( 
+            array( 'core/paragraph', array(
+                'placeholder' => 'Add Biography',
+            ) ),
+            array( 'core/buttons', array(
+                'placeholder' => 'Add Link to Portfolio',
+            ) ),  
+        ),
+        'template_lock'      => 'all'
+    );
+
+    register_post_type( 'school-student', $args );
 }
 add_action('init', 'school_register_custom_post_types');
 

@@ -39,7 +39,6 @@ get_header();
 									)
 								)
 							);
-	
 							$query = new WP_Query($args);
 							if($query -> have_posts()){
 								echo '<section class = "staff-wrapper"><h2 class = "staff-category">' . esc_html__( $term->name, 'fwd') .'</h2>';
