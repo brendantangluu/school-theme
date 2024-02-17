@@ -12,7 +12,16 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+		
+	<div class="footer-menus">
+			<nav class="footer-navigation">
+				<?php 
+				wp_nav_menu( array( 'theme_location' => 'footer-menu')); 
+				?>
+			</nav>
+	
+	<div class="site-info">
+
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'school-theme' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
