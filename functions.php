@@ -162,6 +162,13 @@ function school_theme_scripts() {
 
 	wp_enqueue_script( 'school-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
+	wp_enqueue_style(
+		'school-googlefonts',
+		'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap',
+		array(),
+		null
+	);
+
 	if(is_home()){
 		// Animate on Scroll
 		wp_enqueue_style(
@@ -187,6 +194,8 @@ function school_theme_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'school_theme_scripts' );
+
+
 
 /**
  * Implement the Custom Header feature.
