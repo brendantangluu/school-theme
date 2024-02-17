@@ -75,7 +75,7 @@ function school_register_custom_post_types(){
         'show_in_rest'       => true,
         'menu_position'      => 7,
         'menu_icon'          => 'dashicons-admin-users',
-        'supports'           => array( 'title', 'editor' ),
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
         'template'           => array( 
             array( 'core/paragraph', array(
                 'placeholder' => 'Add Biography',
