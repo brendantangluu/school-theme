@@ -92,6 +92,7 @@ function school_register_custom_post_types(){
 add_action('init', 'school_register_custom_post_types');
 
 function school_register_taxonomies(){
+    // Register Staff Taxonomy
     $labels = array(
         'name'              => _x( 'Staff Categories', 'taxonomy general name' ),
         'singular_name'     => _x( 'Staff Category', 'taxonomy singular name' ),
@@ -118,5 +119,33 @@ function school_register_taxonomies(){
         'rewrite'           => array( 'slug' => 'staff-categories' ),
     );
     register_taxonomy( 'school-staff-category', array( 'school-staff' ), $args );
+
+    // Register Student Specialty Taxonomy
+    $labels = array(
+        'name'              => _x( 'Student Specialty Categories', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Student Specialty Category', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Student Specialty Categories' ),
+        'all_items'         => __( 'All Student Specialty Category' ),
+        'parent_item'       => __( 'Parent Student Specialty Category' ),
+        'parent_item_colon' => __( 'Parent Student Specialty Category:' ),
+        'edit_item'         => __( 'Edit Student Specialty Category' ),
+        'view_item'         => __( 'View Student Specialty Category' ),
+        'update_item'       => __( 'Update Student Specialty Category' ),
+        'add_new_item'      => __( 'Add New Student Specialty Category' ),
+        'new_item_name'     => __( 'New Student Specialty Category Name' ),
+        'menu_name'         => __( 'Student Specialty Category' ),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_in_menu'      => true,
+        'show_in_nav_menu'  => true,
+        'show_in_rest'      => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'student-specialty-categories' ),
+    );
+    register_taxonomy( 'school-specialty-category', array( 'school-student' ), $args );
 }
 add_action('init', 'school_register_taxonomies' );
