@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if(!is_front_page()){
+		<?php if(is_front_page()){
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		}
 		?>
@@ -21,7 +21,7 @@
 
 	<div class="entry-content">
 		<?php
-		if(is_single()){
+		if(is_single() || is_front_page()){
 			the_content();
 			
 		}else{
