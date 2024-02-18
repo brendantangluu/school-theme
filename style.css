@@ -531,12 +531,14 @@ table {
 --------------------------------------------- */
 a {
 	color: #4169e1;
+	text-decoration: none;
 }
 a:visited {
-	color: #800080;
+	color: #4169e1;
 }
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: #87CEEB;
+	text-decoration: underline;
 }
 a:focus {
 	outline: thin dotted;
