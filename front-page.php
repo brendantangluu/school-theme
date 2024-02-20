@@ -55,7 +55,9 @@ get_header();
 		<?php
 		endwhile; // End of the loop.
 		?>
-
+<?php 
+				echo wp_get_attachment_image( get_field( 'logo' ), 'medium' );
+				?>
 	</main><!-- #main -->
 
 <?php
