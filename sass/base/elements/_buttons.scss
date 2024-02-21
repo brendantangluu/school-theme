@@ -12,3 +12,12 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.wp-block-search__button{
+	background: #305c9f;
+	color: white;
+	padding: 1rem;
+	line-height: 1;
+	width: 100%;
+	margin: 0;
+}
