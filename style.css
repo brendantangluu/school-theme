@@ -662,16 +662,19 @@ textarea {
 	background-color: black;
 	margin: 0;
 }
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+@media(min-width: 800px){
+	.main-navigation ul ul {
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		position: absolute;
+		top: 100%;
+		left: -999em;
+		z-index: 99999;
+	}
+	.main-navigation ul ul ul {
+		left: -999em;
+		top: 0;
+	}
+
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
