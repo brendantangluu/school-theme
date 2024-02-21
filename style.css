@@ -634,7 +634,7 @@ textarea {
 	grid-area: main;
 	margin-top: 55px;
 	padding: 0 1rem;
-	min-height: calc(100vh - 388px);
+	min-height: calc(100vh - 211px);
 }
 
 .widget-area {
@@ -901,6 +901,23 @@ textarea {
 	max-width: 300px;
 }
 
+.schedule {
+	margin: 0;
+	padding: 0;
+}
+
+.schedule tr {
+	background-color: #eee;
+}
+
+.schedule tbody tr:nth-of-type(even) {
+	background-color: white;
+}
+
+.page-id-94 {
+	height: 100vh;
+}
+
 @media (min-width: 600px) {
 	.staff-content {
 		width: 48%;
@@ -916,6 +933,9 @@ textarea {
 		float: right;
 		margin-left: 1.5em;
 		margin-bottom: 0;
+	}
+	.schedule tr td {
+		padding: 1rem;
 	}
 }
 @media (min-width: 800px) {

@@ -24,7 +24,7 @@ get_header();
 
 			if( have_rows('schedule') ):
 				?>
-				<ul>
+				<ul class="schedule">
 					<table>
 						<tbody>
 						<tr>
