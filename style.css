@@ -739,6 +739,7 @@ textarea {
 	left: 0;
 	z-index: 1000;
 	padding: 0 1rem;
+	margin-bottom: 100px;
 }
 
 @media screen and (min-width: 50em) {
@@ -800,7 +801,7 @@ textarea {
 	flex: 1 0 50%;
 }
 
-footer {
+.site-footer {
 	background-color: #404040;
 	display: flex;
 	flex-direction: column;

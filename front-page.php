@@ -44,8 +44,10 @@ get_header();
                         </article>
                         <?php
                     }
-					?> 
-					<a href="<?php the_permalink(12)?>">See All News</a> 
+					?>
+					<p>
+						<a href="<?php the_permalink(12)?>">See All News</a> 
+					</p> 
 					<?php
                     wp_reset_postdata();
                 }
