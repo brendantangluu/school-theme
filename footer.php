@@ -15,28 +15,25 @@
 		
 	<div class="footer-menus">
 			<nav class="footer-navigation">
-				<?php 
-				wp_nav_menu( array( 'theme_location' => 'footer-menu')); 
-				?>
+				
 				<?php 
 				the_custom_logo();
 				?>
-			</nav>
-	
-	<div class="site-info">
 
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'school-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'school-theme' ), 'WordPress' );
+			</nav>
+			<section class="credits">
+					<h2>Credits</h2>
+					<p>Created by Brendan Tang-Luu and Uellem Espinueva</p>
+					<p>Photos Courtersy of <a href="https://burst.shopify.com/">Burst</a></p>
+			</section>
+			<nav class="footer-links">
+				
+				<h2>Links</h2>
+				<?php 
+				wp_nav_menu( array( 'theme_location' => 'footer-menu')); 
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'school-theme' ), 'school-theme', '<a href="http://btech.codes">Brendan Tang-Luu</a>' );
-				?>
-		</div><!-- .site-info -->
+
+			</nav>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
