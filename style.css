@@ -530,8 +530,9 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #003c71;
 	text-decoration: none;
+	font-weight: bolder;
 }
 a:visited {
 	color: #4169e1;
@@ -853,6 +854,17 @@ textarea {
 		text-align: left;
 	}
 }
+footer span {
+	display: block;
+	line-height: 1.7rem;
+}
+
+@media (min-width: 800px) {
+	footer span {
+		display: inline-block;
+		margin-right: 3rem;
+	}
+}
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -861,6 +873,13 @@ textarea {
 
 .updated:not(.published) {
 	display: none;
+}
+
+.entry-content img {
+	width: 100%;
+	max-height: 400px;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 
 .page-content,

@@ -225,3 +225,15 @@
 		text-align: left;
 	}
 }
+
+footer span{
+	display: block;
+	line-height: 1.7rem;
+}
+
+@media (min-width: 800px){
+	footer span{
+		display: inline-block;
+		margin-right: 3rem;
+	}
+}
