@@ -16,7 +16,7 @@ get_header();
 
 			<header class="page-header">
 				<h1>
-					<?php single_term_title();?>
+					<?php single_term_title();?> Students
 				</h1>
 				<?php
 				the_archive_description( '<div class="archive-description">', '</div>' );

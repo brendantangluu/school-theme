@@ -65,6 +65,20 @@
 	height: 100vh;
 }
 
+.student-item img{
+	width: 300px;
+	height: 200px;
+	object-fit: cover;
+}
+
+@media(min-width: 340px){
+	.student-item img{
+		display: inline;
+		float: left;
+		margin-right: 1.5em;
+	}
+}
+
 @media (min-width: 600px){
 	.staff-content{
 		width: 48%;
@@ -75,6 +89,17 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+	}
+
+	.students{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	.student-item img{
+		display: block;
+		float: none;
 	}
 
 	.single-school-student .wp-post-image{
@@ -99,6 +124,18 @@
 	.home-blog a{
 		width: 100%;
 	}
+<<<<<<< Updated upstream
 
 }
 
+=======
+}
+
+@media(min-width: 900px){
+	.students{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+	}
+}
+>>>>>>> Stashed changes
