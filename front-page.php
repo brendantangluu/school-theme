@@ -36,7 +36,7 @@ get_header();
                     while($blog_query  -> have_posts()){
                         $blog_query -> the_post();
                         ?>
-                        <article>
+                        <article class ="home-blog-article">
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail('portrait-blog'); ?>
                                 <h3><?php the_title(); ?></h3>

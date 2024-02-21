@@ -829,6 +829,25 @@ textarea {
 	padding: 0 2rem;
 }
 
+.home-blog-article {
+	position: relative;
+	margin: 0 auto 1em;
+	max-width: 300px;
+}
+
+.home-blog h3 {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 99999;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 1rem;
+	margin: 0;
+	max-width: 300px;
+}
+
 @media (min-width: 600px) {
 	.staff-content {
 		width: 48%;
@@ -844,6 +863,17 @@ textarea {
 		float: right;
 		margin-left: 1.5em;
 		margin-bottom: 0;
+	}
+}
+@media (min-width: 800px) {
+	.home-blog {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.home-blog h2,
+	.home-blog a {
+		width: 100%;
 	}
 }
 /* Comments
