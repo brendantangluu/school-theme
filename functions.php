@@ -48,7 +48,7 @@ function school_theme_setup() {
 	
 	// Custom Crop sizes
 	add_image_size('portrait-blog', 300, 200, true);
-	add_image_size('student-portrait', 200, 300, true);
+	add_image_size('student-portrait', 200, 300, array( 'center', 'center' ));
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
