@@ -53,7 +53,7 @@ get_header();
 									<h2 id=<?php echo $id; ?>>
 										<a href="<?php the_permalink(); ?> "><?php the_title(); ?></a>
 									</h2>
-									<?php the_post_thumbnail('medium'); ?>
+									<?php the_post_thumbnail(); ?>
 									<?php the_excerpt(); ?>
 									<?php echo get_the_term_list( $post->ID, 'school-specialty-category', '<p>Specialty: ', '<p>' ); ?>
 							</article>

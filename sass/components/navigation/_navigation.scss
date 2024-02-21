@@ -82,7 +82,11 @@
 
 .menu-menu-1-container{
 	position: absolute;
-	top: 3rem;
+	top: 3rem;.students{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
 
 }
 
@@ -113,7 +117,7 @@
 	}
 
 	.main-navigation ul li{
-		padding: 0 1rem;
+		padding: 0 0.5rem;
 	}
 
 	.main-navigation ul li a{
@@ -203,7 +207,28 @@
 	font-weight: bold;
 }
 
+@media(min-width: 800px){
+	.main-navigation .sub-menu li{
+		background-color: black;
+		padding: 0;
+		width: 200px;
+	}
+	.main-navigation .sub-menu li a{
+		padding: 1rem;
+		text-align: left;
+	}
+	.sub-menu{
+		flex-direction: column;
+	}
+}
+
+
 @media (min-width: 1000px){
+	.site-header{
+		justify-content: space-around;
+	}
+	
+	
 	.footer-menus{
 		display:grid;
 		grid-template-columns: 17rem 30rem 12rem;
