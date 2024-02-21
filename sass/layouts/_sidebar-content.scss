@@ -1,4 +1,5 @@
-.site {
+.site,
+.blog .site {
 	display: grid;
 	grid-template-columns: ($size__site-sidebar) auto;
 	grid-template-areas:

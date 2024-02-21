@@ -623,7 +623,7 @@ textarea {
 	margin: 0 auto;
 	max-width: 2200px;
 	grid-template-columns: 1fr minmax(0, 1000px) 1fr;
-	grid-template-areas: "header header header" ". main ." "footer footer footer";
+	grid-template-areas: "header header header" ". main ." ". sidebar ." "footer footer footer";
 }
 
 .site-header {
