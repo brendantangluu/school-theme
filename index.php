@@ -21,8 +21,11 @@ get_header();
 		</header>
 		<?php
 		if ( have_posts() ) :
+			if(is_home()){
 				?>
+					<h1><?php single_post_title(); ?></h1>
 				<?php
+			}
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
