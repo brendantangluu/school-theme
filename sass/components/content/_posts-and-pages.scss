@@ -25,6 +25,10 @@
 	padding: 0 2rem;
 }
 
+.home-blog{
+	margin-bottom: 1rem;
+}
+
 .home-blog-article{
 	position: relative;
 	margin: 0 auto 1em;
@@ -34,7 +38,7 @@
 .home-blog h3{
 	position: absolute;
 	background-color: rgba(255,255,255,.8);
-	z-index: 99999;
+	z-index: 999;
 	bottom: 0;
 	left: 0;
 	right: 0;

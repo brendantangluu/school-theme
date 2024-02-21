@@ -634,6 +634,7 @@ textarea {
 	grid-area: main;
 	margin-top: 55px;
 	padding: 0 1rem;
+	min-height: calc(100vh - 388px);
 }
 
 .widget-area {
@@ -808,6 +809,7 @@ footer {
 	text-align: center;
 	padding: 1rem;
 	color: white;
+	overflow: hidden;
 }
 
 .footer-navigation img {
@@ -880,6 +882,10 @@ footer {
 	padding: 0 2rem;
 }
 
+.home-blog {
+	margin-bottom: 1rem;
+}
+
 .home-blog-article {
 	position: relative;
 	margin: 0 auto 1em;
@@ -889,7 +895,7 @@ footer {
 .home-blog h3 {
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.8);
-	z-index: 99999;
+	z-index: 999;
 	bottom: 0;
 	left: 0;
 	right: 0;

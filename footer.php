@@ -13,29 +13,27 @@
 
 	<footer id="colophon" class="site-footer">
 		
-	<div class="footer-menus">
-			<nav class="footer-navigation">
-				
-				<?php 
-				the_custom_logo();
-				?>
+		<div class="footer-menus">
+				<nav class="footer-navigation">
+					
+					<?php 
+					the_custom_logo();
+					?>
 
-			</nav>
-			<section class="credits">
-					<h2>Credits</h2>
-					<p>Created by Brendan Tang-Luu and Uellem Espinueva</p>
-					<p>Photos Courtersy of <a href="https://burst.shopify.com/">Burst</a></p>
-			</section>
-			<nav class="footer-links">
-				
-				<h2>Links</h2>
-				<?php 
-				wp_nav_menu( array( 'theme_location' => 'footer-menu')); 
-				?>
-
-			</nav>
+				</nav>
+				<section class="credits">
+						<h2>Credits</h2>
+						<p>Created by Brendan Tang-Luu and Uellem Espinueva</p>
+						<p>Photos Courtersy of <a href="https://burst.shopify.com/">Burst</a></p>
+				</section>
+				<nav class="footer-links">
+					<h2>Links</h2>
+					<?php 
+					wp_nav_menu( array( 'theme_location' => 'footer-menu')); 
+					?>
+				</nav>
+		</div><!-- #page -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
