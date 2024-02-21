@@ -33,7 +33,7 @@
 
 	<div class="entry-content">
 		<?php
-		the_post_thumbnail('medium');
+		the_post_thumbnail();
 		if(is_single() || is_front_page()){
 			the_content();
 			

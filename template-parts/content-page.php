@@ -20,7 +20,7 @@
 
 	<div class="entry-content">
 		<?php
-		if(is_single() || is_front_page()){
+		if(is_single() OR is_front_page() OR is_page()){
 			the_content();
 			
 		}else{
