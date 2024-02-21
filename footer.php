@@ -24,7 +24,7 @@
 				<section class="credits">
 						<h2>Credits</h2>
 						<p>Created by Brendan Tang-Luu and Uellem Espinueva</p>
-						<p>Photos Courtersy of <a href="https://burst.shopify.com/">Burst</a></p>
+						<p>Photos Courtesy of <a href="https://uellemespinueva.com/mindset">Mindset</a></p>
 				</section>
 				<nav class="footer-links">
 					<h2>Links</h2>
