@@ -11,3 +11,9 @@
 .custom-logo-link {
 	display: inline-block;
 }
+
+.blog .site-main article div img{
+	width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
