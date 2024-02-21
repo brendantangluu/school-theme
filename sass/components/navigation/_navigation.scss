@@ -101,7 +101,7 @@
 	
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 50em) {
 
 	.menu-toggle {
 		display: none;
@@ -111,6 +111,20 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
+	.main-navigation ul li{
+		padding: 0 1rem;
+	}
+
+	.main-navigation ul li a{
+		padding: 1rem;
+	}
+
+	.menu-menu-1-container{
+		position: relative;
+		top: 0;
+	}
+
 }
 
 .nav-menu{
@@ -122,6 +136,14 @@
     width: 100%;
 	background-color: gray;
 }
+
+.site-title{
+	text-transform: uppercase;
+}
+.site-title a{
+	color: white;
+}
+
 
 .comment-navigation,
 .posts-navigation,

@@ -740,13 +740,23 @@ textarea {
 	padding: 0 1rem;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 50em) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: flex;
 		justify-content: space-between;
+	}
+	.main-navigation ul li {
+		padding: 0 1rem;
+	}
+	.main-navigation ul li a {
+		padding: 1rem;
+	}
+	.menu-menu-1-container {
+		position: relative;
+		top: 0;
 	}
 }
 .nav-menu {
@@ -757,6 +767,14 @@ textarea {
 	padding: 0;
 	width: 100%;
 	background-color: gray;
+}
+
+.site-title {
+	text-transform: uppercase;
+}
+
+.site-title a {
+	color: white;
 }
 
 .site-main .comment-navigation,
